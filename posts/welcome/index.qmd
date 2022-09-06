@@ -3,6 +3,7 @@ title: "Birds watched in Christmas"
 author: "Adarsh More"
 date: "2022-09-06"
 image: image.jpg
+bibliography: references.bib
 ---
 
 This is the blog assessment for ETC5523 Communicating with Data, Monash University.
@@ -13,3 +14,8 @@ This is the blog assessment for ETC5523 Communicating with Data, Monash Universi
  
  This data has **six variables**, called **year**, **species** which has the species names in English, **species_latin** which has the species names in latin, **how_many_counted** contains the raw bird count, **total_hours** contains total hours spent counting, **how_many_counted_by_hour** describes the number of birds counted divided by total hours in that year.
 
+The **source** of the data is from the tidytuesday [@rfordatascience] project on github.
+
+
+
+## References
