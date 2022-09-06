@@ -1,12 +1,15 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
-categories: [news]
+title: "Birds watched in Christmas"
+author: "Adarsh More"
+date: "2022-09-06"
+image: image.jpg
 ---
 
-This is the first post in a Quarto blog. Welcome!
+This is the blog assessment for ETC5523 Communicating with Data, Monash University.
 
-![](thumbnail.jpg)
+### Data Description
 
+ The data for this blog post is about various bird species counted by birdwatchers in Hamilton area of Ontario. Birdwatchers have counted birds they saw or heard in a day. Birds are counted every year around Christmas time, since 1921. The dataset is called **bird_counts.csv**. 
+ 
+ This data has **six variables**, called **year**, **species** which has the species names in English, **species_latin** which has the species names in latin, **how_many_counted** contains the raw bird count, **total_hours** contains total hours spent counting, **how_many_counted_by_hour** describes the number of birds counted divided by total hours in that year.
 
