@@ -93,7 +93,7 @@ p1 <- ggplot(data2,
       theme(text = element_text(size = 12)) +
       labs(x = "Year",
            y = "Bird Count",
-           title = "Total Birds Counted in each year since 1921")
+           title = "Figure 1: Total Birds Counted in each year since 1921")
 
 ggplotly(p1)
 ```
@@ -116,7 +116,7 @@ p2 <-  ggplot(bird_counts2,
       theme(text = element_text(size = 12)) +
       labs(x = "Year",
            y = "Bird Count",
-           title = "Total European Starlings counted in each year")
+           title = "Figure 2: Total European Starlings counted in each year")
 
 ggplotly(p2)
 ```
