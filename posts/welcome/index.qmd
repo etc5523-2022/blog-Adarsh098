@@ -23,7 +23,34 @@ The R packages used for this blog post are
  DT [@R-DT]
 
 
+```{r loading libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(plotly)
+library(kableExtra)
+library(DT)
+```
 
+```{r reading in data, warning=FALSE, message=FALSE, echo=FALSE}
+bird_counts <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-18/bird_counts.csv")
+
+bird_counts <- bird_counts[complete.cases(bird_counts), ]
+```
+
+```{r data1, warning=FALSE, message=FALSE, echo=FALSE}
+data1 <- bird_counts %>% 
+  group_by(species) %>%
+  summarize(how_many_counted = sum(how_many_counted)) %>%
+  rename("Birds Counted" = how_many_counted) %>% 
+  arrange(desc(`Birds Counted`)) 
+```
+
+```{r data2, warning=FALSE, message=FALSE, echo=FALSE}
+data2 <- bird_counts %>% 
+  group_by(year) %>%
+  summarize(how_many_counted = sum(how_many_counted)) %>%
+  rename("Birds Counted" = how_many_counted) %>% 
+  arrange(desc(`Birds Counted`))
+```
 
 
 
