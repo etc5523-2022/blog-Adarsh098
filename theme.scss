@@ -1,0 +1,13 @@
+/*-- scss:defaults --*/
+
+
+$primary: #772953 !default;
+$font-family-base: "Segoe UI", "Roboto" !default;
+$body-color: #495057 !default;
+$headings-font-family: "Prata", "Roboto", "Playfair Display", "Montserrat" !default;
+
+
+
+#title-block-header.quarto-title-block.default .quarto-title .title {
+    font-family: "Oleo Script", $headings-font-family;
+}

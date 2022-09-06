@@ -10,8 +10,7 @@ website:
         href: https://github.com/etc5523-2022
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: theme.scss
 
 
 
