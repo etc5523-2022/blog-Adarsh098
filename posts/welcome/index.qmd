@@ -16,6 +16,46 @@ This is the blog assessment for ETC5523 Communicating with Data, Monash Universi
 
 The **source** of the data is from the tidytuesday [@rfordatascience] project on github.
 
+The R packages used for this blog post are 
+ tidyverse [@R-tidyverse], 
+ plotly [@R-plotly]
+ kableExtra [@R-kableExtra]
+ DT [@R-DT]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## References
