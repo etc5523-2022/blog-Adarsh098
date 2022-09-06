@@ -10,4 +10,7 @@ about:
 
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+**Hi, I'm Adarsh More**.
+<br>
+I'm a Business Analytics student at Monash University, Australia. I have a passion for R, data analysis and data
+visualization. On this blog, I share new ideas and topics from what I learn. You can find me on [GitHub](https://github.com/Adarsh098)
