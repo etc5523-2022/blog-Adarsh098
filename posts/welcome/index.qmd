@@ -96,7 +96,4 @@ The data represents numerous birds counted, although most birds counted are on a
 
 
 
-
-
-
 ## References
