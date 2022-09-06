@@ -4,6 +4,8 @@ author: "Adarsh More"
 date: "2022-09-06"
 image: image.jpg
 bibliography: references.bib
+csl: apa6.csl
+toc: true
 ---
 
 This is the blog assessment for ETC5523 Communicating with Data, Monash University.
@@ -99,15 +101,30 @@ ggplotly(p1)
 As per the @fig-plot1, there are only few birds counted until year 1939, after which the aggregate bird count fluctuates but rises steadily. There was high concentration of birds from 1975 to 2005.
 
 
+```{r plot2, warning=FALSE, message=FALSE, echo=FALSE}
+#| label: fig-plot2
+#| fig-cap: "Total European Starlings counted in each year since 1921"
+bird_counts2 <- bird_counts %>% 
+  filter(species == "European Starling") %>% 
+  rename("Birds counted" = how_many_counted)
+p2 <-  ggplot(bird_counts2,
+             aes(x = year,
+                 y = `Birds counted`)) +
+  geom_point() +
+  geom_line(col = "steelblue") +
+  theme_bw() +
+      theme(text = element_text(size = 12)) +
+      labs(x = "Year",
+           y = "Bird Count",
+           title = "Total European Starlings counted in each year")
+
+ggplotly(p2)
+```
 
 
+European Starlings were the dominant bird species in Ontario. The trend of total birds counted was at its peak between 1975 and 2005. It is a similar trend of European starling's which indicates that Starlings were counted on a higher frequency than most of the others bird species during that period.
 
-
-
-
-
-
-
+European starlings were not counted in large numbers until late 1960's, see @fig-plot2. The most European starlings were found in 1980 but afterwards their numbers continued to decline. [@alison_2009] says that Starlings regularly nest in tree cavities which are used by native North American birds and that such behavior can be disruptive to the nesting activities of other birds, this could be another reason for the high count of starlings in Ontario.
 
 
 
