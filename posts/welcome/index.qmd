@@ -53,10 +53,24 @@ data2 <- bird_counts %>%
 ```
 
 
+### Why European starling was the most counted bird in Ontario during Christmas since 1921.  
 
 
+```{r table1, warning=FALSE, message=FALSE, echo=FALSE}
+#| label: fig-table1
+#| fig-cap: "Most Counted birds" 
+
+datatable(data1, options = list(),
+          scales::comma(data1$`Birds Counted`, accuracy = 1000),
+          caption = "Table 2: Most counted birds") %>% 
+  formatStyle("Birds Counted",
+  background = styleColorBar(data1$`Birds Counted`, "skyblue", -90)) %>% 
+  formatRound("Birds Counted", digits = 0)
+              
+```
 
 
+The data represents numerous birds counted, although most birds counted are on a similar frequency. The aggregate numbers of bird count shows only one species with a very high count. From the @fig-table1, the most counted bird is **European Starling**, but the rest of the birds have a lower frequency of count.
 
 
 
