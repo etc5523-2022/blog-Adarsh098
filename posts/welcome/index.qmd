@@ -55,15 +55,18 @@ data2 <- bird_counts %>%
 
 ### Why European starling was the most counted bird in Ontario during Christmas since 1921.  
 
+![](image.jpg)
+
+
+### Analysis
 
 ```{r table1, warning=FALSE, message=FALSE, echo=FALSE}
 #| label: fig-table1
 #| fig-cap: "Most Counted birds" 
 
 datatable(data1, options = list(),
-          scales::comma(data1$`Birds Counted`, accuracy = 1000),
-          caption = "Table 2: Most counted birds") %>% 
-  formatStyle("Birds Counted",
+          caption = "Table 1: Most counted birds") %>% 
+  formatStyle("Birds Counted", border = '1px solid #ddd',
   background = styleColorBar(data1$`Birds Counted`, "skyblue", -90)) %>% 
   formatRound("Birds Counted", digits = 0)
               
@@ -73,9 +76,27 @@ datatable(data1, options = list(),
 The data represents numerous birds counted, although most birds counted are on a similar frequency. The aggregate numbers of bird count shows only one species with a very high count. From the @fig-table1, the most counted bird is **European Starling**, but the rest of the birds have a lower frequency of count.
 
 
+As per [@alison_2009] "the European Starling is not a native bird species, they were introduced into North America in 1850, when 100 starlings were released by the Acclimation society of North America in an attempt to establish all birds mentioned in Shakespeare's plays".
 
 
+```{r plot1, warning=FALSE, message=FALSE, echo=FALSE}
+#| label: fig-plot1
+#| fig-cap: "Total Birds Counted in each year since 1921"
+p1 <- ggplot(data2,
+           aes(x = year,
+               y = `Birds Counted`)) +
+      geom_point() +
+      geom_line() +
+      theme_bw() +
+      theme(text = element_text(size = 12)) +
+      labs(x = "Year",
+           y = "Bird Count",
+           title = "Total Birds Counted in each year since 1921")
 
+ggplotly(p1)
+```
+
+As per the @fig-plot1, there are only few birds counted until year 1939, after which the aggregate bird count fluctuates but rises steadily. There was high concentration of birds from 1975 to 2005.
 
 
 
